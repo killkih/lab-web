@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+}
+
+body {
+  font-family: Lato;
+  color: #222224;
+}
+
+.header {
+  background-color: #222222;
+  padding: 1rem 0;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.header__logo {
+  max-width: 44px;
+  max-height: 38px;
+  border: none;
+}
+.header__lens {
+  max-width: 26px;
+  max-height: 26.79px;
+  border: none;
+}
+.header__list {
+  max-width: 32px;
+  max-height: 23px;
+  border: none;
+}
+.header__men {
+  max-width: 29px;
+  max-height: 29px;
+  border: none;
+}
+.header__basket {
+  max-width: 41px;
+  max-height: 37px;
+  border: none;
+}
+.header__nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 41px;
+}
+.header__nav li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview {
+  background-color: #F1E4E6;
+  margin: 0 auto;
+}
+.preview__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.preview__title {
+  align-self: center;
+  max-width: 330px;
+  position: relative;
+}
+.preview__title::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 0;
+  background-color: #f16d7f;
+  width: 12px;
+  height: 100%;
+}
+
+.offer {
+  padding-top: 65px;
+}
+.offer__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 180px;
+  gap: 30px;
+}
+.offer__item {
+  padding: 105px 103px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.offer__item--1 {
+  background-image: url("../images/offer1.jpg");
+  background-repeat: no-repeat;
+}
+.offer__item--2 {
+  background-image: url("../images/offer2.jpg");
+  background-repeat: no-repeat;
+}
+.offer__item--3 {
+  background-image: url("../images/offer3.jpg");
+  background-repeat: no-repeat;
+}
+.offer__item--4 {
+  background-image: url("../images/offer4.jpg");
+  background-repeat: no-repeat;
+  padding: 0;
+}
+.offer__item--full {
+  grid-column: 1/4;
+  background-position-y: center;
+  background-position-x: center;
+}
+.offer__title {
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.offer__description {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 96px 0;
+}
+.feature__cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 48px 0;
+  gap: 30px;
+}
+.feature__card {
+  max-width: 360px;
+  background-color: #f8f8f8;
+}
+.feature__description {
+  color: #9f9f9f;
+  font-size: 14px;
+}
+.feature__title {
+  font-size: 30px;
+  margin-bottom: 6px;
+  color: #222224;
+}
+.feature__button {
+  color: #f16d7f;
+  font-size: 16px;
+  padding: 15px 39px;
+  transition: all 0.3s;
+}
+.feature__button:hover {
+  background: #f16d7f;
+  color: white;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+.card__content {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.card__title {
+  font-size: 13px;
+}
+.card__description {
+  font-size: 14px;
+  font-weight: 300;
+}
+.card__price {
+  font-size: 16px;
+}
+.card__image {
+  transition: all 0.3s;
+}
+.card__image-wrapper {
+  position: relative;
+  transition: all 0.3s;
+}
+.card__image-wrapper:hover .card__image {
+  filter: brightness(0.5);
+}
+.card__image-wrapper:hover .card__button {
+  display: flex;
+  animation: 0.3s linear 0s 1 normal fade-anim;
+}
+.card__button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 0;
+  color: white;
+  border: 1px solid white;
+  padding: 12px 14px;
+  transition: all 0.5s;
+}
+
+.button--outlined {
+  border: 1px solid #f16d7f;
+}
+
+.advantage {
+  background-color: #222222;
+}
+.advantage__list {
+  padding: 104px 0;
+  display: flex;
+  gap: 30px;
+}
+.advantage__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.advantage__title {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.advantage__description {
+  font-weight: 300;
+  color: white;
+  text-align: center;
+}
+
+.feedback {
+  padding: 97px 0;
+  background-image: url("../images/form-bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.feedback__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.feedback__review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.feedback__message {
+  text-align: center;
+  font-size: 20px;
+  max-width: 359px;
+}
+.feedback__title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 150%;
+}
+.feedback__description {
+  font-size: 18px;
+  text-align: center;
+}
+.feedback__italic {
+  font-style: italic;
+}
+
+.form__input {
+  background-color: #e1e1e1;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  padding: 10px 60px 10px 22px;
+}
+.form__button {
+  background-color: #f16d7f;
+  padding: 15px 16px;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  color: white;
+}
+.form__controls {
+  margin-top: 32px;
+  display: flex;
+}
+
+.footer {
+  padding: 24px 0;
+  background-color: #222222;
+}
+.footer__copyright {
+  color: white;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__list {
+  display: flex;
+  gap: 8px;
+}
+.footer__link {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.footer__link:hover {
+  background-color: #f16d7f;
+}
+.footer__link:hover > svg > path {
+  fill: white;
+}
+
+.text {
+  font-size: 32px;
+}
+.text--big {
+  font-size: 48px;
+  font-weight: 700;
+}
+.text--pink {
+  color: #f16d7f;
+}
+.text--lg {
+  white-space: nowrap;
+  font-size: 32px;
+}
+.text--bold {
+  font-weight: 700;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}/*# sourceMappingURL=styles.css.map */
